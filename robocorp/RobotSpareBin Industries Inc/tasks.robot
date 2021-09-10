@@ -23,7 +23,7 @@ Close the browser
     Close Browser
 
 Create a ZIP file of the receipts
-    Archive Folder With Zip     ${OUTPUT_DIR}       receipts.zip
+    Archive Folder With Zip     ${OUTPUT_DIR}${/}receipts       receipts.zip
 
 Embed the robot screenshot to the receipt PDF file
     [Arguments]     ${screenshot}       ${pdf}
