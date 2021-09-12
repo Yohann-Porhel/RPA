@@ -75,8 +75,9 @@ Store the receipt as a PDF file
     [Return]    ${pdf}
 
 Submit the order
-    Click Button    order
-    Wait Until Element Is Visible       order-another       timeout=1s
+    Mute Run On Failure                 Click Element When Visible
+    Run Keyword And Ignore Error        Click Element When Visible      order
+    Wait Until Element Is Visible       order-another                   timeout=1s
 
 Take a screenshot of the robot
     [Arguments]     ${orderNumber}
